@@ -1,0 +1,10 @@
+<header id="header" class="row" data-hook>
+  <figure id="logo" class="columns six" data-hook>
+    <br>
+    <br>
+    <%= link_to root_path do %>
+      <font size="20">urbannomad</font></figure>
+    <% end %>
+  <%= render :partial => 'spree/shared/nav_bar' %>
+  <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+</header>
