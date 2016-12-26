@@ -1,4 +1,4 @@
-# Nomad Store
+# Nomad Shop
 
 This is the app for me and Salie to work on A Solidus store.
 
