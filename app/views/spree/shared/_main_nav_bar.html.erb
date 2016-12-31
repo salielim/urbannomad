@@ -1,14 +1,16 @@
 <nav class="columns sixteen">
   <ul id="main-nav-bar" class="inline" data-hook>
-    <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %> /&nbsp;&nbsp;</li>
-
-    <li class="nav navbar-nav">
-      <% @taxonomies.each do |taxonomy| %>
-        <%= nav_tree(taxonomy.root, @taxon, 1) %>
-      <% end %>
-    </li>
-
-
+    <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+    
+    <% if current_page?('/login') %>
+      <li>/&nbsp;&nbsp;&nbsp;Login</li>
+    <% elsif current_page?('/signup') %>
+      <li>/&nbsp;&nbsp;&nbsp;Signup</li>
+    <% elsif current_page?('/password/recover') %>
+      <li>/&nbsp;&nbsp;&nbsp;Forgot Password</li>
+    <% else %>
+      <li>/&nbsp;&nbsp;&nbsp;Shop</li>
+    <% end %>
 
     <li id="link-to-cart" data-hook>
       <noscript>
